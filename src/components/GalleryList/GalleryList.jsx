@@ -2,7 +2,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 
-function GalleryList({galleryList}) {
+function GalleryList({galleryList, getGalleryList}) {
     // Insert PUT ...maybes delete
     // const addLike = (event) => {
     //     console.log('Id is:', event.currentTarget.dataset.id );
@@ -24,7 +24,7 @@ function GalleryList({galleryList}) {
     return (
     <>
         {galleryList.map(item => (
-            (<GalleryItem key={item.id} item={item} />)
+            (<GalleryItem key={item.id} item={item} getGalleryList={getGalleryList}/>)
         ))}
     </>
     );
