@@ -1,8 +1,25 @@
+// import { response } from 'express';
 import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 
 function GalleryList({galleryList}) {
     // Insert PUT ...maybes delete
+    // const addLike = (event) => {
+    //     console.log('Id is:', event.currentTarget.dataset.id );
+    //     let id = event.currentTarget.dataset.id;
+
+    //     axios ({
+    //         method: 'PUT',
+    //         url: `/gallery/${id}`, 
+    //     })
+    //         .then( response => {
+    //             console.log('response from server:', response);
+    //             getGalleryList();
+    //         })
+    //         .catch( error => {
+    //             console.log('error on put request:', error);
+    //         })
+    // };
 
     return (
     <>
