@@ -1,3 +1,4 @@
+import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 
 function GalleryList({galleryList}) {
@@ -6,16 +7,20 @@ function GalleryList({galleryList}) {
     return (
     <>
         {galleryList.map(item => (
-            <div key={item.id}>
-               <img className="pic" src={item.path}/> 
-                <p>{item.path}</p>
-            </div>
+            (<GalleryItem key={item.id} item={item} />)
         ))}
     </>
     );
 }
 
 export default GalleryList;
+
+
+            // <div key={item.id}>
+            //    <img className="pic" src={item.path}/> 
+            //     <p>{item.path}</p>
+            // </div>
+
 
  {/* <p>Gallery goes here</p>
             <img src="images/goat_small.jpg"/>
