@@ -21,10 +21,10 @@ function GalleryItem({item, getGalleryList}) {
     };
 
     return (
-        <div>
+        <div className="card">
         <img className="pic" data-id={item.id} src={item.path}/>
-        <p>Like count: {item.likes}</p>
-        <button data-id={item.id} onClick={addLike}>Like</button>
+        <button data-id={item.id} className="like" onClick={addLike}>Like!</button>
+        <p>{item.likes} people like this!</p>
         </div>
     )
 }
