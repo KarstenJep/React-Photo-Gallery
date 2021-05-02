@@ -25,7 +25,7 @@ function App() {
         });
   }
 
-
+  // Display to DOM using component props
     return (
       <div className="App">
         <Header />

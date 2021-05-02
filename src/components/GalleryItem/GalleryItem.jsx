@@ -1,10 +1,11 @@
 import Axios from 'axios';
 import { useState } from 'react';
 
+// component function to set up display of gallery items
 function GalleryItem({item, getGalleryList}) {
 
     const [state, setState] = useState(true);
-
+    // setting state and using toggle state to set up conditional rendering
     const toggleState = () => {
             if (state == false) {
                 return setState(true)
@@ -12,6 +13,7 @@ function GalleryItem({item, getGalleryList}) {
                 return setState(false)
         }
 
+    // function to take in id of card and add a like using PUT
     const addLike = (event) => {
         console.log('Id is:', event.currentTarget.dataset.id );
         let id = event.currentTarget.dataset.id;
@@ -29,6 +31,7 @@ function GalleryItem({item, getGalleryList}) {
             })
     };
 
+        // layout for gallery items before being sent to the DOM
     return (
         <div className="card">
             {
