@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-/* .App-title {
-  font-size: 1.5em;
-} */
+body {
+  background: url(https://i.pinimg.com/originals/53/d9/cd/53d9cd303086eae0decfed3d000fc976.jpg);
+  background-size: cover;
+}
 

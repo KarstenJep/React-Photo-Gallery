@@ -1,7 +1,16 @@
 import Axios from 'axios';
-
+import { useState } from 'react';
 
 function GalleryItem({item, getGalleryList}) {
+
+    const [state, setState] = useState(true);
+
+    const toggleState = () => {
+            if (state == false) {
+                return setState(true)
+            }
+                return setState(false)
+        }
 
     const addLike = (event) => {
         console.log('Id is:', event.currentTarget.dataset.id );
@@ -22,14 +31,20 @@ function GalleryItem({item, getGalleryList}) {
 
     return (
         <div className="card">
-        <img className="pic" data-id={item.id} src={item.path}/>
-        <button data-id={item.id} className="like" onClick={addLike}>Like!</button>
-        <p>{item.likes} people like this!</p>
+            {
+                state ?
+                <img className="pic" data-id={item.id} onClick={toggleState} src={item.path}/> :
+                <p className="pic" data-id={item.id} onClick={toggleState}>{item.description}</p>
+            }
+            <button data-id={item.id} className="like" onClick={addLike}>Like!</button>
+            {
+                item.likes == 0 ?
+                <p className="p">0 people like this :(</p> :
+                <p className="p">Like Count: {item.likes}</p>
+            }  
         </div>
     )
 }
 
 export default GalleryItem;
 
-
-// onClick={imgDescription}

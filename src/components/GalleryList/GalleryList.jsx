@@ -1,4 +1,3 @@
-// import { response } from 'express';
 import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 
