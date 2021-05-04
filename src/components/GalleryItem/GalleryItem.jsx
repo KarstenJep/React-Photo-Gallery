@@ -14,9 +14,8 @@ function GalleryItem({item, getGalleryList}) {
         }
 
     // function to take in id of card and add a like using PUT
-    const addLike = (event) => {
-        console.log('Id is:', event.currentTarget.dataset.id );
-        let id = event.currentTarget.dataset.id;
+    const addLike = (id) => {
+        console.log('Id is:', id);
 
         Axios ({
             method: 'PUT',
@@ -36,10 +35,10 @@ function GalleryItem({item, getGalleryList}) {
         <div className="card">
             {
                 state ?
-                <img className="pic" data-id={item.id} onClick={toggleState} src={item.path}/> :
-                <p className="pic" data-id={item.id} onClick={toggleState}>{item.description}</p>
+                <img className="pic" onClick={toggleState} src={item.path}/> :
+                <p className="pic" onClick={toggleState}>{item.description}</p>
             }
-            <button data-id={item.id} className="like" onClick={addLike}>Like!</button>
+            <button className="like" onClick={(event) => addLike(item.id)}>Like!</button>
             {
                 item.likes == 0 ?
                 <p className="p">0 people like this :(</p> :
