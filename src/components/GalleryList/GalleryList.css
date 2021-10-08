@@ -13,6 +13,17 @@
     font-size: larger;
     align-items:baseline;
 }
+.desc {
+    width: 350px;
+    height: 250px;
+    display: inline-block;
+    border: solid white 2px;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    height: 30vh;
+    align-items:baseline;
+}
 
 .p {
     color: white;

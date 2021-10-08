@@ -15,18 +15,18 @@ function GalleryItem({item, getGalleryList}) {
 
     // function to take in id of card and add a like using PUT
     const addLike = (id) => {
-        console.log('Id is:', id);
+        // console.log('Id is:', id);
 
         Axios ({
             method: 'PUT',
             url: `/gallery/like/${id}`, 
         })
             .then( response => {
-                console.log('response from server:', response);
+                // console.log('response from server:', response);
                 getGalleryList();
             })
             .catch( error => {
-                console.log('error on put request:', error);
+                // console.log('error on put request:', error);
             })
     };
 
@@ -36,7 +36,7 @@ function GalleryItem({item, getGalleryList}) {
             {
                 state ?
                 <img className="pic" onClick={toggleState} src={item.path}/> :
-                <p className="pic" onClick={toggleState}>{item.description}</p>
+                <p className="desc" onClick={toggleState}>{item.description}</p>
             }
             <button className="like" onClick={(event) => addLike(item.id)}>Like!</button>
             {
