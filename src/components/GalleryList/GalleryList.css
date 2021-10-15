@@ -4,7 +4,7 @@
 }
 
 .pic {
-    width: 350px;
+    /* width: 350px; */
     height: 250px;
     display: inline-block;
     border: solid white 2px;
@@ -12,17 +12,28 @@
     color: white;
     font-size: larger;
     align-items:baseline;
+    cursor: pointer;
+    box-shadow: black 0px 2px 4px;
 }
+
+.pic:hover {
+    box-shadow: black 0px 6px 12px;
+}
+
 .desc {
     width: 350px;
     height: 250px;
     display: inline-block;
-    border: solid white 2px;
+    border: solid white 5px;
     border-radius: 5px;
     color: white;
     font-size: larger;
     height: 30vh;
     align-items:baseline;
+}
+
+.desc {
+    box-shadow: black 0px 6px 12px;
 }
 
 .p {

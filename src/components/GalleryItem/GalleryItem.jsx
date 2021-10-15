@@ -35,13 +35,15 @@ function GalleryItem({item, getGalleryList}) {
         <div className="card">
             {
                 state ?
-                <img className="pic" onClick={toggleState} src={item.path}/> :
+                <img className="pic" onClick={toggleState} src={item.path} width="350"/>
+                :
                 <p className="desc" onClick={toggleState}>{item.description}</p>
             }
             <button className="like" onClick={(event) => addLike(item.id)}>Like!</button>
             {
                 item.likes == 0 ?
-                <p className="p">0 people like this :(</p> :
+                <p className="p">0 people like this :(</p> 
+                :
                 <p className="p">Like Count: {item.likes}</p>
             }  
         </div>

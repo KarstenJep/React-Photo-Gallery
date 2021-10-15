@@ -6,8 +6,8 @@ Duration: 3 days.
 
 A gallery was needed to display pictures in an aesthetically pleasing format. A like button is needed to log the total likes on a picture. When an image is clicked, the picture should be replaced with a description of the image in its place.
 
-## Screen Shot
-![Here is an example of the application](./public/images/Screen Shot.png)
+## URL Link
+https://shielded-plateau-72344.herokuapp.com/
 
 
 ## Prerequisites
